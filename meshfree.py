@@ -8,7 +8,7 @@ def shape(gpos,x,v,dm):
     nv = x[:,v]
     dif = np.dot(gpos.T,won) - nv
     p = np.concatenate((won,dif[0:2],[dif[0]**2,dif[0]*dif[1],dif[1]**2]),axis = 0)
-    w = cubwgt(dif,v,dm);
+    w = cubwgt(dif,v,dm)
     B = p*np.array([w,w,w,w,w,w])
     aa = np.zeros((6,6))
     for i in range(L):

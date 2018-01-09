@@ -33,7 +33,7 @@ for i in range(inte):
         v = mf.finode(gpos,x,dm)
         phi = mf.shape(gpos,x,v,dm)
         plotu[i,j] = np.dot(phi,x[0,v]+x[1,v])
-print time.clock() - timestart
+print(time.clock() - timestart)
 fig = plt.figure()
 ax = fig.gca(projection='3d')
 surf = ax.plot_surface(xin,yin,plotu,cmap=cm.coolwarm,linewidth=0,antialiased=False)
